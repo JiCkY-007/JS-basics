@@ -43,3 +43,31 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+//stack 
+
+let myCollegeName = "abhigyan.sinha.iitm@gmail.com"
+
+let anotherName = myCollegeName
+anotherName = "chai-aur-code"
+
+console.log(myCollegeName);
+console.log(anotherName); // yaha pe value pass hoti copy se isliye value change ni hoti
+
+//heap
+
+let userOne = {
+    email: "user@google.com",
+    upi:"userOne@upi"
+}
+
+let userTwo = userOne
+
+userTwo.email = "cr7sinha@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email); // yaha pe value pass hoti hai reference se isliye change hojati hai 
+
+
