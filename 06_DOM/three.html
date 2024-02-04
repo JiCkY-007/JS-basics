@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || Chai aur code</title>
+</head>
+
+<body style= "background-color: #212121; color: #fff;">
+    
+</body>
+
+<script> 
+   const div =  document.createElement('div')
+   console.log(div);
+   const h1 =  document.createElement('h1')
+   console.log(h1);
+   div.className ="main"
+   div.id= Math.round(Math.random()*10 +1)
+   console.log(div.id);
+
+   // custom attribute set krne ke liye
+   div.setAttribute("title", "genreated title")
+   div.style.backgroundColor= "green"
+   div.style.padding="12px"
+
+   /* 
+    abhi khuch bhi show ni hoga main page pe 
+    kyuki saara game humne memory me khela hai 
+    abhi usse page pe display krne ke liye
+    document ko bolu ki is child ko attach toh karo
+   */
+
+    div.innerText= "Chai AUr CODE"
+    const addText = document.createTextNode("Chai aur code")
+    div.appendChild(addText)
+
+    // chalo document pe jodo (append karo)
+
+    document.body.appendChild(div)
+
+
+
+</script>
+</html>
