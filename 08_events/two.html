@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code || ASYNC </title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    const sayMyname = function(){
+        console.log("abhigyan");
+    }
+
+    const changeText = function(){
+        document.querySelector('h1').
+        innerHTML='best js series'
+    }
+
+    const changeMe = setTimeout(sayMyname,4000)
+
+    document.querySelector('#stop').
+    addEventListener('click', function(){
+        clearTimeout(changeMe)
+    })
+</script>
+</html>
